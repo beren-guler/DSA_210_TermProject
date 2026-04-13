@@ -1,1 +1,20 @@
-pip install pandas requests thefuzz opencv-python numpy matplotlib seaborn ipykernel
+pip install pandas numpy opencv-python scipy requests thefuzz matplotlib seaborn ipykernel
+"""
+ Data Manipulation & Analysis
+pandas
+numpy
+
+# Computer Vision & Image Processing
+opencv-python
+scipy
+
+# API & Web Scraping (Repair step for covers)
+requests
+
+# Visualization (Next Phase)
+matplotlib
+seaborn
+
+# Environment Management
+jupyter
+"""
