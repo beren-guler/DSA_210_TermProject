@@ -1,0 +1,1 @@
+pip install pandas requests thefuzz opencv-python numpy matplotlib seaborn ipykernel
