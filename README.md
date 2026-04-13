@@ -64,8 +64,8 @@ To run this project locally, follow these steps to set up your environment:
 
 ### 1. Clone the repository
 ```bash
-git clone [YOUR_REPO_URL]
-cd [YOUR_REPO_NAME]
+git clone [https://github.com/beren-guler/DSA_210_TermProject.git]
+cd [DSA_210_TermProject]
 ```
 ### 2.Set up a Virtual Environment
 ```bash
