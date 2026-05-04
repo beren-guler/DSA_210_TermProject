@@ -33,6 +33,36 @@ We used OpenCV to analyze cover images and calculate:
 * **K-Means Clustering:** Segmented the dataset into 4 distinct "Visual Styles."
 * **Random Forest Regressor:** Determined **Feature Importance** to identify which artistic traits are the strongest predictors of success.
 
+## 📂 Dataset
+
+### Sources
+| Source | Year | Description |
+|--------|------|-------------|
+| Kaggle (Manhwa Dataset) | 2022 | Cover image URLs and metadata for manhwa titles |
+| Jikan API (MyAnimeList) | 2026 | Updated scores, rankings, popularity, and current cover images |
+
+### Main Research Dataset (`data/final_manhwa_research_data.csv`)
+The primary dataset contains **723 manhwa titles** matched across both time periods, with **23 columns** covering:
+
+- **Identifiers & Metadata:** `title`, `url_2022`, `url_2026`, `score`, `rank`, `popularity`
+- **2022 Visual Features** (extracted via OpenCV from Kaggle covers):
+  - `v2022_saturation_mean`, `v2022_brightness_mean`, `v2022_contrast_rms`, `v2022_edge_density`, `v2022_color_entropy`
+- **2026 Visual Features** (extracted via OpenCV from MAL/Jikan covers):
+  - `v2026_saturation_mean`, `v2026_brightness_mean`, `v2026_contrast_rms`, `v2026_edge_density`, `v2026_color_entropy`
+- **Longitudinal Difference Metrics:** `diff_edge`, `diff_sat`, `diff_bright`, `diff_entropy` (2026 − 2022 changes)
+- **Cover Change Flag:** `cover_changed` — `True` for 714 titles (~98.8%) whose cover art changed between 2022 and 2026
+
+Of the 723 titles, **556** have valid MAL scores (mean: **7.12**, range: 5.4–9.06).
+
+### Top 200 Elite Dataset (`data/top_200_research/json/top_200_metadata.json`)
+A separate curated set of the **top 200 highest-ranked manhwa** on MAL (as of 2026), used as a benchmark group in the analysis. Contains `title`, `rank`, `popularity`, `score`, and `cover_url`.
+
+### Supplementary Data
+- `data/webtoon_data.csv` — Additional Webtoon platform listings
+- `data/tapas_data.csv` — Additional Tapas platform listings
+- `data/broken_links_2022.csv` — Titles excluded due to invalid 2022 image URLs
+- `data/missing_from_jikan.csv` — Titles not found in the 2026 Jikan API lookup
+
 ## 📁 File Structure
 * `01_data_collection.ipynb`: API calls, Data merging, and Image processing.
 * `02_data_analysis.ipynb`: EDA, Hypothesis testing, and ML modeling.
