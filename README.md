@@ -38,8 +38,19 @@ We used OpenCV to analyze cover images and calculate:
 ### Sources
 | Source | Year | Description |
 |--------|------|-------------|
-| Kaggle (Manhwa Dataset) | 2022 | Cover image URLs and metadata for manhwa titles |
+| [Webtoons Dataset – victorsoeiro (Kaggle)](https://www.kaggle.com/datasets/victorsoeiro/webtoons-dataset) | 2022 | Cover image URLs and metadata for manhwa/webtoon titles |
+| [Tapas × Webtoons Dataset – victorsoeiro (Kaggle)](https://www.kaggle.com/datasets/victorsoeiro/tapas-webtoons) | 2022 | Cross-platform webtoon listings from Tapas and Webtoons |
 | Jikan API (MyAnimeList) | 2026 | Updated scores, rankings, popularity, and current cover images |
+
+### Data Attribution
+The 2022 baseline data used in this project comes from two Kaggle datasets published by **[Victor Soeiro (victorsoeiro)](https://www.kaggle.com/victorsoeiro)**:
+
+- **Webtoons Dataset** — [kaggle.com/datasets/victorsoeiro/webtoons-dataset](https://www.kaggle.com/datasets/victorsoeiro/webtoons-dataset)
+  Used to build the 2022 cover image archive and manhwa metadata baseline (`data/webtoon_data.csv`).
+- **Tapas × Webtoons Dataset** — [kaggle.com/datasets/victorsoeiro/tapas-webtoons](https://www.kaggle.com/datasets/victorsoeiro/tapas-webtoons)
+  Used for cross-platform title coverage and supplementary Tapas listings (`data/tapas_data.csv`).
+
+All credit for the original 2022 data collection goes to the dataset author. These datasets are used here strictly for academic research purposes.
 
 ### Main Research Dataset (`data/final_manhwa_research_data.csv`)
 The primary dataset contains **723 manhwa titles** matched across both time periods, with **23 columns** covering:
