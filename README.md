@@ -6,7 +6,7 @@ A Data Science project exploring the relationship between **visual art character
 This project investigates whether a Manhwa’s cover art—specifically its color profile, complexity, and contrast—can predict its success on platforms like MyAnimeList (MAL). We leverage data from 2022 (Kaggle) and 2026 (Jikan API/MAL) to analyze visual shifts and aesthetic trends.
 
 ## 🛠️ Tech Stack
-* **Data Collection:** Jikan API (MAL), Python `requests`, JSON processing.
+* **Data Collection:** Kaggle (2022 baseline — Webtoons & Tapas datasets by victorsoeiro), Jikan API (MAL), Python `requests`, JSON processing.
 * **Image Processing:** `OpenCV` (Feature extraction: Saturation, Brightness, Contrast, Edge Density, Color Entropy).
 * **Data Analysis:** `pandas`, `numpy`, `scipy` (Hypothesis Testing).
 * **Visualization:** `matplotlib`, `seaborn` (KDE Plots, Box Plots, Regression Plots).
@@ -39,16 +39,16 @@ We used OpenCV to analyze cover images and calculate:
 | Source | Year | Description |
 |--------|------|-------------|
 | [Webtoons Dataset – victorsoeiro (Kaggle)](https://www.kaggle.com/datasets/victorsoeiro/webtoons-dataset) | 2022 | Cover image URLs and metadata for manhwa/webtoon titles |
-| [Tapas × Webtoons Dataset – victorsoeiro (Kaggle)](https://www.kaggle.com/datasets/victorsoeiro/tapas-webtoons) | 2022 | Cross-platform webtoon listings from Tapas and Webtoons |
+| [Tapas Dataset – victorsoeiro (Kaggle)](https://www.kaggle.com/datasets/victorsoeiro/tapas-webtoons) | 2022 | Tapas platform title listings and metadata |
 | Jikan API (MyAnimeList) | 2026 | Updated scores, rankings, popularity, and current cover images |
 
 ### Data Attribution
 The 2022 baseline data used in this project comes from two Kaggle datasets published by **[Victor Soeiro (victorsoeiro)](https://www.kaggle.com/victorsoeiro)**:
 
 - **Webtoons Dataset** — [kaggle.com/datasets/victorsoeiro/webtoons-dataset](https://www.kaggle.com/datasets/victorsoeiro/webtoons-dataset)
-  Used to build the 2022 cover image archive and manhwa metadata baseline (`data/webtoon_data.csv`).
+  Used for Webtoon platform 2022 cover image archive and manhwa metadata baseline (`data/webtoon_data.csv`).
 - **Tapas × Webtoons Dataset** — [kaggle.com/datasets/victorsoeiro/tapas-webtoons](https://www.kaggle.com/datasets/victorsoeiro/tapas-webtoons)
-  Used for cross-platform title coverage and supplementary Tapas listings (`data/tapas_data.csv`).
+  Used for Tapas platform 2022 cover image archive and manhwa metadata baseline (`data/tapas_data.csv`).
 
 All credit for the original 2022 data collection goes to the dataset author. These datasets are used here strictly for academic research purposes.
 
