@@ -62,7 +62,6 @@ The two Kaggle datasets were merged with fuzzy matching (1,469 unique titles) an
 * `01_data_collection.ipynb`: API calls, fuzzy matching, data merging, cover downloads and feature extraction.
 * `02_data_analysis.ipynb`: EDA, composite index, ANOVA, OLS regression, K-Means clustering.
 * `03_machine_learning.ipynb`: Random Forest models, Spearman correlations, Mann-Whitney U, Tukey HSD, feature importance and longitudinal analysis.
-* `final_report.md`: Full write-up.
 * `data/`: Raw JSONs, processed CSVs and image metadata.
 * `requirements.txt`: Python dependencies.
 
